@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, Response
+import http
 
 import requests
 
@@ -19,3 +20,10 @@ def _():
 @app.get("/items")
 def _(page: int = 1):
     return { "page": page }
+
+#MAKING AND CATCHING A WEB-HOOK
+@app.post("/webhook")
+async def _(request: Request, response: Response):
+    body = await request.json()
+    print(body)
+    return { "message": "OK" }

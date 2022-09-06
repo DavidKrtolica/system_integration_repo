@@ -11,7 +11,16 @@ const router = Router();
  *         description: Returns an array of users.
  */
 router.get("/users", (req, res) => {
-    res.send({users: []});
+    res.send({users: [
+        {
+            name: "David",
+            role: "student"
+        },
+        {
+            name: "Marko",
+            role: "full-time worker"
+        }
+    ]});
 });
 
 export default router;
