@@ -11,7 +11,7 @@ def _():
 
 @app.get("/otherendpoint")
 def _():
-    return {"Endpoint": True }
+    return {"AnotherEndpoint": True }
 
 @app.get("/mymessage")
 def _():
