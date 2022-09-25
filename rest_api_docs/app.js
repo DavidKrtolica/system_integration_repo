@@ -2,15 +2,15 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-import router from "./routers/users.js";
-app.use(router);
+import plantRouter from "./routers/plants.js";
+app.use(plantRouter);
 
 import swaggerJSDoc from "swagger-jsdoc";
 const options = {
     definition: {
         openapi: '3.0.0',
         info: {
-        title: 'Users API',
+        title: 'Plants API',
         version: '0.0.1',
         },
     },
